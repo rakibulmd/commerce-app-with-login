@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<title>Confirm Identity</title>
+	</head>
+	<body>
+		<section
+			id="first-section"
+			class="hidden w-screen h-screen p-6 flex flex-col lg:flex-row justify-center items-center gap-10 bg-gradient-to-br fr from-red-300 to-purple-400 via-cyan-200"
+		>
+			<div
+				class="w-80 md:w-96 h-96 bg-black/10 rounded-full border-white/50 border flex flex-col justify-center items-center"
+			>
+				<p class="text-xl py-5">You are now authorized!</p>
+				<button
+					class="px-6 py-2 bg-sky-600 text-white rounded font-bold text-left block hover:bg-sky-500 active:bg-sky-400"
+				>
+					Continue
+				</button>
+			</div>
+		</section>
+		<section
+			id="second-section"
+			class="w-screen h-screen p-6 flex flex-col lg:flex-row justify-center items-center gap-10 bg-gradient-to-br fr from-red-300 to-purple-400 via-cyan-200"
+		>
+			<div
+				class="w-80 md:w-96 h-96 bg-black/10 rounded-xl border-white/50 border flex flex-col justify-center items-center"
+			>
+				<p id="pin-show" class="text-xl py-5">
+					Click below to generate PIN
+				</p>
+				<button
+					id="pin-generate"
+					class="px-6 py-2 bg-sky-600 text-white rounded font-bold text-left block hover:bg-sky-500 active:bg-sky-400"
+				>
+					Generate
+				</button>
+			</div>
+			<div
+				class="w-80 md:w-96 h-96 bg-black/10 rounded-xl border-white/50 border p-4"
+			>
+				<div class="px-8 h-8 mb-4">
+					<p id="">Enter PIN to confirm:</p>
+					<p id="pin-input" class="text-2xl font-bold"></p>
+				</div>
+				<div id="input-button" class="grid grid-cols-3 gap-3 p-8">
+					<button
+						class="inline-block p-1 py-4 bg-sky-600 input-button text-white rounded active:scale-105 shadow shadow-sky-800"
+					>
+						1
+					</button>
+					<button
+						class="inline-block p-1 py-4 bg-sky-600 input-button text-white rounded"
+					>
+						2
+					</button>
+					<button
+						class="inline-block p-1 py-4 bg-sky-600 input-button text-white rounded"
+					>
+						3
+					</button>
+					<button
+						class="inline-block p-1 py-4 bg-sky-600 input-button text-white rounded"
+					>
+						4
+					</button>
+					<button
+						class="inline-block p-1 py-4 bg-sky-600 input-button text-white rounded"
+					>
+						5
+					</button>
+					<button
+						class="inline-block p-1 py-4 bg-sky-600 input-button text-white rounded"
+					>
+						6
+					</button>
+					<button
+						class="inline-block p-1 py-4 bg-sky-600 input-button text-white rounded"
+					>
+						7
+					</button>
+					<button
+						class="inline-block p-1 py-4 bg-sky-600 input-button text-white rounded"
+					>
+						8
+					</button>
+					<button
+						class="inline-block p-1 py-4 bg-sky-600 input-button text-white rounded"
+					>
+						9
+					</button>
+					<button
+						class="inline-block p-1 py-4 bg-sky-600 input-button text-white rounded"
+					>
+						0
+					</button>
+					<button
+						id="pin-submit"
+						class="inline-block p-1 py-4 bg-orange-600 text-white rounded col-span-2 font-bold"
+					>
+						Submit
+					</button>
+				</div>
+			</div>
+		</section>
+		<script src="pin.js"></script>
+	</body>
+</html>
