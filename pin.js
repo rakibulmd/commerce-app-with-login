@@ -9,6 +9,8 @@ function getElementById(inputId) {
 document.getElementById("pin-generate").addEventListener("click", function () {
 	getElementById("pin-show").innerText =
 		1000 + Math.floor(Math.random() * 9000);
+	getElementById("pin-show2").innerText =
+		getElementById("pin-show").innerText;
 	getElementById("pin-input").innerText = "";
 });
 
@@ -16,7 +18,12 @@ let buttons = document.getElementsByClassName("input-button");
 
 for (const button of buttons) {
 	button.addEventListener("click", function (event) {
-		getElementById("pin-input").innerText += event.target.innerText;
+		if (
+			getElementById("pin-input").innerText.length >= 0 &&
+			getElementById("pin-input").innerText.length <= 3
+		) {
+			getElementById("pin-input").innerText += event.target.innerText;
+		}
 	});
 }
 
@@ -30,6 +37,18 @@ document.getElementById("pin-submit").addEventListener("click", function () {
 		) {
 			getElementById("first-section").classList.remove("hidden");
 			getElementById("second-section").classList.add("hidden");
+		} else {
+			getElementById("pin-input").innerText = "Not matched! Try again.";
 		}
 	}
 });
+
+document.getElementById("clear-btn").addEventListener("click", function () {
+	getElementById("pin-input").innerText = "";
+});
+
+document
+	.getElementById("continue-to-products")
+	.addEventListener("click", function () {
+		window.location.href = "./products.html";
+	});
